@@ -33,7 +33,7 @@ mkdir ~/.ssh && chmod +700 ~/.ssh && logout
 
 ### Generate SSH Key Pair
 ```bash
-ssh-keygen-b 4096
+ssh-keygen -b 4096
 ```
 ```bash
 cd ~/.ssh
