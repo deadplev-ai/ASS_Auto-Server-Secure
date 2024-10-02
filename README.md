@@ -13,7 +13,7 @@ Commands shared on every server to apply necessary security measures such as:
 
 ### Apply Automatic Updates
 ```bash
-  apt get update && apt get upgrade -y && apt install unattended-upgrades -y && dpkg-reconfigure --priority=low unattended-upgrades
+  apt-get update && apt-get upgrade -y && apt install unattended-upgrades -y && dpkg-reconfigure --priority=low unattended-upgrades
 ```
 ### Add New User
 ```bash
