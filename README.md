@@ -17,8 +17,10 @@ Commands shared on every server to apply necessary security measures such as:
 ```
 ### Add New User
 ```bash
-echo -e "Imp0ssibl£42!\Imp0ssibl£42!\n\n\n\n\n\n\n\n"|adduser deadplev && usermod -aG sudo deadplev && logout
+useradd deadplev && usermod -aG sudo deadplev && passwd deadplev && logout
 ```
+
+#AUTO SET UNATTENDED UPGRADES TO YES NON INTERACTIVE
 
 ### SSH into New User + Key Directory
 SSH into new user
