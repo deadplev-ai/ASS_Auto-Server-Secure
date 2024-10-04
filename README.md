@@ -4,15 +4,6 @@
 ### Intended OS:
 - Debian 11/12
 - Ubuntu 22.04+
-
-### Features
-
-- Automatic Security Updates
-- Modular UFW Firewall
-- Unique SSH Port
-- Non-Root User
-
-- OPTIONAL: Secure Keypair Login
 <br />
 
 ## One Command Setup
