@@ -29,9 +29,9 @@ sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/s
 ## Coming Soon
 
 - Y/N Software Packages (Optional)
-- Anti SSH Brute Force
-- Anti FTP Brute Force
-- Auto Scan Anti Virus
+- Anti SSH Brute Force (Fail2Ban)
+- Anti FTP Brute Force (Fail2Ban Mail)
+- Auto Scan Anti Virus (ClamAV + Config)
 - Disable Unused Filesystems
 - Advanced Intrusion Detection (AIDE)
 - Sysctl Kernel Security Paramaters
