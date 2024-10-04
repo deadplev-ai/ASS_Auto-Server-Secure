@@ -16,6 +16,9 @@ sudo systemctl restart ssh
 sudo ufw enable
 sudo ufw status
 
+# Remove passwordless sudo entry
+sudo rm /etc/sudoers.d/$USER
+
 myIP=$(curl -s ipinfo.io/ip)
 echo
 echo "----------------------------"
