@@ -16,6 +16,9 @@ sudo systemctl restart ssh
 sudo ufw enable
 sudo ufw status
 
+# Remove useless packages
+sudo apt-get autoremove 
+
 # Remove passwordless sudo entry
 sudo rm /etc/sudoers.d/$USER
 
