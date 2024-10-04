@@ -2,9 +2,8 @@
 # Server Setup
 
 ### Intended OS:
-- Debian 12
-- Debian 11
-- Ubuntu 22.04+ (UNTESTED)
+- Debian 11/12
+- Ubuntu 22.04+
 
 ### Features
 
