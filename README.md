@@ -1,8 +1,6 @@
 
 # Server Setup
 
-## Description
-
 ### Intended OS:
 - Debian 12
 - Debian 11
