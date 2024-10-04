@@ -28,8 +28,8 @@ cd ~/.ssh && ssh-keygen -b 4096
 scp KEY.pub deadplev@IP:~/.ssh/authorized_keys
 ```
 
-### SSH into New User + Security Config
-Unique SSH Port | Block Root Login | Block Password Login
-SSH into user
+### SSH into New User
+Block Password Login
 ```bash
 sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/ssh/sshd_config && sudo systemctl restart ssh
+```
