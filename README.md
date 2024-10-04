@@ -11,15 +11,12 @@ Commands shared on every server to apply necessary security measures such as:
 
 ## Installation
 
-### Auto Updates + New User
+### Auto Updates + New User + Key Directory
 ```bash
-  apt-get update && apt-get upgrade -y && apt install unattended-upgrades -y && sed -i 's/APT::Periodic::Unattended-Upgrade "0";/APT::Periodic::Unattended-Upgrade "1";/g' /etc/apt/apt.conf.d/20auto-upgrades && adduser deadplev && usermod -aG sudo deadplev && su deadplev && cd .. && mkdir ~/.ssh && chmod +700 ~/.ssh
+  apt-get update && apt-get upgrade -y && apt install unattended-upgrades -y && sed -i 's/APT::Periodic::Unattended-Upgrade "0";/APT::Periodic::Unattended-Upgrade "1";/g' /etc/apt/apt.conf.d/20auto-upgrades && adduser deadplev && usermod -aG sudo deadplev && su deadplev
 ```
-
-### SSH into New User + Key Directory
-SSH into new user
 ```bash
-mkdir ~/.ssh && chmod +700 ~/.ssh && logout
+cd .. && mkdir ~/.ssh && chmod +700 ~/.ssh && exit && logout
 ```
 
 ### Generate SSH Key Pair
