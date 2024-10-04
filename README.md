@@ -36,3 +36,5 @@ sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/s
 - Advanced Intrusion Detection (AIDE)
 - Sysctl Kernel Security Paramaters
 - Disable Core Dumps
+
+- Auto Clean-up (Remove install.sh & user_setup.sh)
