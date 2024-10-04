@@ -4,7 +4,6 @@
 ### Intended OS:
 - Debian 11/12
 - Ubuntu 22.04+
-<br />
 
 ## One Command Setup
 Auto Security Updates | Unique SSH Port | Firewall | Non Root User
