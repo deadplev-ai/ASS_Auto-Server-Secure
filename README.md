@@ -16,8 +16,9 @@ Commands shared on every server to apply necessary security measures such as:
   apt-get update && apt-get upgrade -y && apt install unattended-upgrades -y && sed -i 's/APT::Periodic::Unattended-Upgrade "0";/APT::Periodic::Unattended-Upgrade "1";/g' /etc/apt/apt.conf.d/20auto-upgrades && adduser deadplev && usermod -aG sudo deadplev && su deadplev
 ```
 ```bash
-cd .. && mkdir ~/.ssh && chmod +700 ~/.ssh && exit && logout
+cd .. && mkdir ~/.ssh && chmod +700 ~/.ssh && read -p "Select Custom SSH Port: " desired_port && sudo sed -i 's/PermitRootLogin yes;/PermitRootLogin no;/g' /etc/ssh/sshd.config && sudo sed -I 's/#Port 22;/Port $desired_port;/g' /etc/ssh/sshd.config && sudo apt install ufw -y && sudo ufw allow $desired_port/tcp && sudo systemctl restart  && sudo ufw enable && exit && logout
 ```
+exit & logout for key gen
 
 ### Generate SSH Key Pair
 ```bash
