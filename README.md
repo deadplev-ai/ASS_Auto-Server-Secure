@@ -31,5 +31,5 @@ scp KEY.pub USER@IP:~/.ssh/authorized_keys
 ### SSH into New User
 Block Password Login
 ```bash
-sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/ssh/sshd_config && sudo systemctl restart ssh
+sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/ssh/sshd_config && sudo systemctl restart ssh && echo && echo "***********************" && echo "Security Setup Complete!" && echo "***********************" && echo
 ```
