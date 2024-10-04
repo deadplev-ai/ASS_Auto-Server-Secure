@@ -11,16 +11,10 @@ Commands shared on every server to apply necessary security measures such as:
 
 ## Installation
 
-### Apply Automatic Updates
+### Auto Updates + New User
 ```bash
-  apt-get update && apt-get upgrade -y && apt install unattended-upgrades -y && dpkg-reconfigure --priority=low unattended-upgrades
+  apt-get update && apt-get upgrade -y && apt install unattended-upgrades -y && sed -i 's/APT::Periodic::Unattended-Upgrade "0";/APT::Periodic::Unattended-Upgrade "1";/g' /etc/apt/apt.conf.d/20auto-upgrades && useradd deadplev && usermod -aG sudo deadplev && passwd deadplev && logout
 ```
-### Add New User
-```bash
-useradd deadplev && usermod -aG sudo deadplev && passwd deadplev && logout
-```
-
-#AUTO SET UNATTENDED UPGRADES TO YES NON INTERACTIVE
 
 ### SSH into New User + Key Directory
 SSH into new user
