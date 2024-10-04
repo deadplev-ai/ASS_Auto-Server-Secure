@@ -16,7 +16,7 @@ Commands shared on every server to apply necessary security measures such as:
   apt-get update && apt-get upgrade -y && apt install unattended-upgrades -y && sed -i 's/APT::Periodic::Unattended-Upgrade "0";/APT::Periodic::Unattended-Upgrade "1";/g' /etc/apt/apt.conf.d/20auto-upgrades && adduser deadplev && usermod -aG sudo deadplev && su deadplev
 ```
 ```bash
-cd .. && mkdir ~/.ssh && chmod +700 ~/.ssh && read -p "Select Custom SSH Port: " desired_port && sudo sed -i 's/PermitRootLogin yes;/PermitRootLogin no;/g' /etc/ssh/sshd_config && sudo sed -i 's/#Port 22;/Port $desired_port;/g' /etc/ssh/sshd_config && sudo apt install ufw -y && sudo ufw allow $desired_port/tcp && sudo systemctl restart ssh && sudo ufw enable && sudo reboot now
+cd .. && mkdir ~/.ssh && chmod +700 ~/.ssh && read -p "Select Custom SSH Port: " desired_port && sudo sed -i "s/PermitRootLogin yes\b/PermitRootLogin no/gI" /etc/ssh/sshd_config /etc/ssh/sshd_config && sudo sed -i "s/#Port 22\b/Port $desired_port/gI" /etc/ssh/sshd_config && sudo apt install ufw -y && sudo ufw allow $desired_port/tcp && sudo systemctl restart ssh && sudo ufw enable && sudo reboot now
 ```
 
 ### Generate SSH Key Pair
