@@ -33,6 +33,7 @@ cd ~/.ssh && ssh-keygen -b 4096
 ```bash
 scp KEY.pub USER@IP:~/.ssh/authorized_keys
 ```
+<br />
 
 SSH into New User → Block Password Login
 ```bash
