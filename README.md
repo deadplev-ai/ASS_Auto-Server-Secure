@@ -1,13 +1,20 @@
 
 # Server Setup
 
-Commands shared on every server to apply necessary security measures such as:
-- Automatic Updates
-- Pub/Priv Key Login
-- Non-Root User
-- UFW Firewall
-- Unique SSH Port
+## Description
 
+### Intended OS:
+- Debian 12
+- Debian 11
+- Ubuntu 22.04+ (UNTESTED)
+
+### Features
+
+- Automatic Security Updates
+- Modular UFW Firewall
+- Secure Keypair Login
+- Unique SSH Port
+- Non-Root User
 
 ## Installation
 
