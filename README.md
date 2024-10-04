@@ -15,7 +15,7 @@
 - OPTIONAL: Secure Keypair Login
 <br />
 
-## Simple Security Setup
+## One Command Setup
 Auto Security Updates | Unique SSH Port | Firewall | Non Root User
 ```bash
 apt get update && apt install git -y && git clone https://github.com/deadplev-ai/Auto-Server-Secure.git && cd Auto-Server-Secure && chmod +x install.sh && ./install.sh
