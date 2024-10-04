@@ -13,7 +13,7 @@ Commands shared on every server to apply necessary security measures such as:
 
 ### Auto Updates + New User
 ```bash
-  apt-get update && apt-get upgrade -y && apt install unattended-upgrades -y && sed -i 's/APT::Periodic::Unattended-Upgrade "0";/APT::Periodic::Unattended-Upgrade "1";/g' /etc/apt/apt.conf.d/20auto-upgrades && useradd deadplev && usermod -aG sudo deadplev && passwd deadplev && logout
+  apt-get update && apt-get upgrade -y && apt install unattended-upgrades -y && sed -i 's/APT::Periodic::Unattended-Upgrade "0";/APT::Periodic::Unattended-Upgrade "1";/g' /etc/apt/apt.conf.d/20auto-upgrades && adduser deadplev && usermod -aG sudo deadplev && logout
 ```
 
 ### SSH into New User + Key Directory
