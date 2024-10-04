@@ -8,4 +8,6 @@ function yes_or_no {
     done
 }
 
-yes_or_no "Install Fail to ban? (Can cause issues with Mail) [Y/N]: " && echo aight
+yes_or_no "Install Fail to ban? (Can cause issues with Mail)" && echo "Install #1"
+
+yes_or_no "Install ProxyManager?" && echo "Install #2"
