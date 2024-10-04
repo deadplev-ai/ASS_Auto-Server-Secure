@@ -25,3 +25,14 @@ SSH into New User → Keypair Login ONLY (Optional)
 ```bash
 sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/ssh/sshd_config && sudo systemctl restart ssh && echo && echo "***********************" && echo "Security Setup Complete!" && echo "***********************" && echo
 ```
+
+## Coming Soon
+
+- Y/N Software Packages (Optional)
+- Anti SSH Brute Force
+- Anti FTP Brute Force
+- Auto Scan Anti Virus
+- Disable Unused Filesystems
+- Advanced Intrusion Detection (AIDE)
+- Sysctl Kernel Security Paramaters
+- Disable Core Dumps
