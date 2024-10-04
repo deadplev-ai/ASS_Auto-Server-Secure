@@ -26,4 +26,8 @@ echo "ssh $USER@$myIP -p $desired_port"
 echo "----------------------------"
 echo
 
-sudo reboot now
+echo
+echo "*****************************"
+echo "Enter: sudo reboot now"
+echo "*****************************"
+echo
