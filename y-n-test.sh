@@ -8,9 +8,6 @@ function yes_or_no {
     done
 }
 
-# Fail2Ban + Email | Anti SSH Brute Force
-yes_or_no "Install Fail2ban? (Anti SSH Brute Force)" && apt-get install fail2ban -y && yes_or_no "Notify by EMail on Security Event?" && echo "test"
-
 # ClamAV + Auto File Scan | Antivirus
 yes_or_no "Install ClamAV? (File AntiVirus)" && echo "Install #2. AUTO SCAN, AUTO UPDATE SIGNATURES. DO POST UFW SO YOU CAN ADD RULES"
 
