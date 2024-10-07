@@ -18,7 +18,10 @@ sudo ufw status
 
 ## YES / NO | SOFTWARE PACKAGES
 # Password Complexity Requirements
-yes_or_no "Enforce Password Complexity Requirements? (For future password updates) && sudo apt -y install libpam-pwquality cracklib-runtime && sed -i 'password   requisite   pam_pwquality.so retry=3/password   requisite   pam_pwquality.so minlen=8 ucredit=-1 lcredit=-1 dcredit=-1 gecoscheck=1 reject_username enforce_for_root' /etc/pam.d/common-password && echo && echo "*****************************" && echo "MINIMUM PASSWORD REQUIREMENTS" && echo "Min Length: 8" && echo "Uppercase: 1" && echo "Lowercase: 1" && echo "Numbers: 1" && echo "CANNOT BE USERNAME | CANNOT CONTAIN GECOS INFO" && echo "*****************************" && echo
+yes_or_no "Enforce Password Complexity Requirements? (For future password updates)" && sudo apt -y install libpam-pwquality cracklib-runtime && sed -i 'password   requisite   pam_pwquality.so retry=3/password   requisite   pam_pwquality.so minlen=8 ucredit=-1 lcredit=-1 dcredit=-1 gecoscheck=1 reject_username enforce_for_root' /etc/pam.d/common-password && echo && echo "*****************************" && echo "MINIMUM PASSWORD REQUIREMENTS" && echo "Min Length: 8" && echo "Uppercase: 1" && echo "Lowercase: 1" && echo "Numbers: 1" && echo "CANNOT BE USERNAME | CANNOT CONTAIN GECOS INFO" && echo "*****************************" && echo
+
+# Fail2Ban + Email | Anti SSH Brute Force
+yes_or_no "Install Fail2ban? (Anti SSH Brute Force)" && apt-get install fail2ban -y && yes_or_no "Notify by EMail on Security Event?" && apt install sendmail-bin sendmail
 
 # Remove useless packages
 sudo apt-get autoremove 
