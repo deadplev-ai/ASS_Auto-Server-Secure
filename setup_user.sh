@@ -49,7 +49,7 @@ yes_or_no "Enforce Password Complexity Requirements? (For future password update
 #yes_or_no "Disable Core Dumps? (!!No More Crash Logs!!)" && echo "Install #5"
 
 # SSH 2FA
-yes_or_no "Install SSH 2FA?" && apt install libpam-google-authenticator && echo && echo "----------------------------" && echo "SAVE YOUR BACKUP KEYS" && echo "----------------------------" && echo && google-authenticator && sudo sed -i "s/PermitEmptyPasswords no\b/PermitEmptyPasswords no \nChallengeResponseAuthentication yes/gI" /etc/ssh/sshd_config && sudo sed -i "s/@include common-auth\b/@include common-auth \n \n#Two Factor Authentication with Google Authenticator \nauth    required    pam_google_authenticator.so/gI" /etc/pam.d/sshd && sudo systemctl restart ssh
+yes_or_no "Install SSH 2FA?" && apt install libpam-google-authenticator && echo && echo "----------------------------" && echo "SAVE YOUR BACKUP KEYS" && echo "----------------------------" && echo && google-authenticator && sudo sed -i "s/PermitEmptyPasswords no\b/PermitEmptyPasswords no \nChallengeResponseAuthentication yes/gI" /etc/ssh/sshd_config && sudo sed -i "s/@include common-auth\b/@include common-auth \n \n# Two Factor Authentication with Google Authenticator \nauth    required    pam_google_authenticator.so/gI" /etc/pam.d/sshd && sudo systemctl restart ssh
 
 
 # Remove useless packages
