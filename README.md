@@ -37,5 +37,6 @@ sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/s
 - Sysctl Kernel Security Paramaters
 - Disable Core Dumps
 - SSH 2FA
+- Password Complexity requirements
 
 - Auto Clean-up (Remove install.sh & user_setup.sh)
