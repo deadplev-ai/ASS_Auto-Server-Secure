@@ -45,7 +45,7 @@ sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/s
 - Anti SSH Brute Force + Mail Notifications (Fail2Ban)
 - Auto Scan Anti Virus (ClamAV + Config)
 - Disable Unused Filesystems
-- Advanced Intrusion Detection (AIDE/Alternative)
+- Advanced Intrusion Detection (AIDE/HIDS/Alternative)
 - Sysctl Kernel Security Paramaters
 - Disable Core Dumps
 - SELinux (NSA Developed Kernel Security)
@@ -53,6 +53,6 @@ sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/s
 - Automatic IP Access Limiting (Optional, used for non VPN servers) ["Would you like to limit SSH access to a certain domain or IP?"]
 - DDOS Protection (UFW Rate limiting + NGINX)
 - AI Powered Security (EMail Analyser, IPS, IDS, Network, Endpoint etc)
-- Dream Machine LAN HTTPS & AI Network analysis
+- Dream Machine LAN HTTPS & AI Network analysis + Potential Home Host Server
 
 - Auto Clean-up (Remove install.sh & user_setup.sh)
