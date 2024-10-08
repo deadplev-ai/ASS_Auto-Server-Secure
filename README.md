@@ -5,6 +5,19 @@
 - Debian 11/12
 - Ubuntu 22.04+
 
+## Current Features
+
+- Automatic Security Updates
+- Custom Non-Root Sudo User
+- Root Login Block
+- Custom SSH Port
+- Strict UFW Config (Auto SSH Allow + Rate Limit)
+- [Y/N] Future Password Complexity Requirements
+- [Y/N] SSH 2FA
+- Auto Package Cleanup
+- More to come...
+<br />
+
 ## One Command Setup
 ```bash
 apt update && apt install git -y && git clone https://github.com/deadplev-ai/ASS_Auto-Server-Secure.git && cd ASS_Auto-Server-Secure && chmod +x install.sh && ./install.sh
@@ -25,18 +38,6 @@ SSH into New User → Keypair Login ONLY (Optional)
 sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/ssh/sshd_config && sudo systemctl restart ssh && echo && echo "***********************" && echo "Security Setup Complete!" && echo "***********************" && echo
 ```
 <br />
-
-## Current Features
-
-- Automatic Security Updates
-- Custom Non-Root Sudo User
-- Root Login Block
-- Custom SSH Port
-- Strict UFW Config (Auto SSH Allow + Rate Limit)
-- [Y/N] Future Password Complexity Requirements
-- [Y/N] SSH 2FA
-- Auto Package Cleanup
-- More to come...
 
 ## Coming Soon
 
