@@ -39,5 +39,6 @@ sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/s
 - SELinux (NSA Developed Kernel Security)
 - Post Quantum Cryptography SSH (OpenSSH 9.0+)
 - Automatic IP Access Limiting (Optional, used for non VPN servers)
+- DDOS Protection
 
 - Auto Clean-up (Remove install.sh & user_setup.sh)
