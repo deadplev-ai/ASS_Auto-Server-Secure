@@ -53,5 +53,6 @@ sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/s
 - Automatic IP Access Limiting (Optional, used for non VPN servers) ["Would you like to limit SSH access to a certain domain or IP?"]
 - DDOS Protection (UFW Rate limiting + NGINX)
 - AI Powered Security (EMail Analyser, IPS, IDS, Network, Endpoint etc)
+- Dream Machine LAN HTTPS & AI Network analysis
 
 - Auto Clean-up (Remove install.sh & user_setup.sh)
