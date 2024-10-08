@@ -21,7 +21,7 @@ sudo sed -i "s/PermitRootLogin yes\b/PermitRootLogin no/gI" /etc/ssh/sshd_config
 sudo sed -i "s/#Port 22\b/Port $desired_port/gI" /etc/ssh/sshd_config
 
 sudo apt install ufw -y
-sudo ufw allow $desired_port/tcp
+sudo ufw limit $desired_port/tcp comment 'Rate limit on SSH attempts'
 sudo systemctl restart ssh
 sudo ufw enable
 sudo ufw status
