@@ -50,7 +50,7 @@ sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/s
 - Disable Core Dumps
 - SELinux (NSA Developed Kernel Security)
 - Post Quantum Cryptography SSH (OpenSSH 9.0+)
-- Automatic IP Access Limiting (Optional, used for non VPN servers)
+- Automatic IP Access Limiting (Optional, used for non VPN servers) ["Would you like to limit SSH access to a certain domain or IP?"]
 - DDOS Protection (UFW Rate limiting + NGINX)
 
 - Auto Clean-up (Remove install.sh & user_setup.sh)
