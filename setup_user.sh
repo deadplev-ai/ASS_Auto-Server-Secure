@@ -31,7 +31,8 @@ sudo ufw status
 #yes_or_no "Enforce Password Complexity Requirements? (For future password updates)" && sudo apt -y install libpam-pwquality cracklib-runtime && sudo sed -i 'password   requisite   pam_pwquality.so retry=3/password   requisite   pam_pwquality.so minlen=8 ucredit=-1 lcredit=-1 dcredit=-1 gecoscheck=1 reject_username enforce_for_root' /etc/pam.d/common-password && echo && echo "*****************************" && echo "MINIMUM PASSWORD REQUIREMENTS" && echo "Min Length: 8" && echo "Uppercase: 1" && echo "Lowercase: 1" && echo "Numbers: 1" && echo "CANNOT BE USERNAME | CANNOT CONTAIN GECOS INFO" && echo "*****************************" && echo
 
 # Fail2Ban + Email | Anti SSH Brute Force
-#yes_or_no "Install Fail2ban? (Anti SSH Brute Force)" && apt-get install fail2ban -y && yes_or_no "Notify by EMail on Security Event?" && apt install sendmail-bin sendmail
+yes_or_no "Install Fail2ban? (Anti SSH Brute Force)" && apt-get install fail2ban -y && sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local && echo "CHANGE jail.local CONFIG" && echo "RESTART SERVICE AND START" && \
+yes_or_no "Notify by EMail on Security Event?" && apt install sendmail-bin sendmail
 
 # ClamAV + Auto File Scan | Antivirus
 #yes_or_no "Install ClamAV? (File AntiVirus)" && echo "Install #2. AUTO SCAN, AUTO UPDATE SIGNATURES. DO POST UFW SO YOU CAN ADD RULES"
