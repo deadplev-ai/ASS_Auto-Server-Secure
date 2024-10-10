@@ -22,5 +22,4 @@ cp setup_user.sh /home/$desired_user/ && chown $desired_user:$desired_user /home
 su - $desired_user -c "bash ~/setup_user.sh"
 
 # Auto Cleanup (Remove if break)
-rm ~/ASS_Auto-Server-Secure/*
-rmdir ~/ASS_Auto-Server-Secure
+rm -rf ASS_Auto-Server-Secure
