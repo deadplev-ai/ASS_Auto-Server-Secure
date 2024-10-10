@@ -8,6 +8,7 @@ function yes_or_no {
             [Nn]*) return  1 ;;
         esac
     done
+}
 
 apt-get update && apt-get upgrade -y && apt install unattended-upgrades -y && \
 sed -i 's/APT::Periodic::Unattended-Upgrade "0";/APT::Periodic::Unattended-Upgrade "1";/g' /etc/apt/apt.conf.d/20auto-upgrades && \
