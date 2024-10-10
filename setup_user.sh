@@ -20,12 +20,6 @@ read -p "Select Custom SSH Port: " desired_port
 sudo sed -i "s/PermitRootLogin yes\b/PermitRootLogin no/gI" /etc/ssh/sshd_config
 sudo sed -i "s/#Port 22\b/Port $desired_port/gI" /etc/ssh/sshd_config
 
-sudo apt install ufw -y
-sudo ufw limit $desired_port/tcp comment 'Rate limit on SSH attempts'
-sudo systemctl restart ssh
-sudo ufw enable
-sudo ufw status
-
 ## YES / NO | SOFTWARE PACKAGES
 # Password Complexity Requirements (Installed in install.sh)
 #yes_or_no "Enforce Password Complexity Requirements? (For future password updates)" && sudo apt -y install libpam-pwquality cracklib-runtime && sudo sed -i 'password   requisite   pam_pwquality.so retry=3/password   requisite   pam_pwquality.so minlen=8 ucredit=-1 lcredit=-1 dcredit=-1 gecoscheck=1 reject_username enforce_for_root' /etc/pam.d/common-password && echo && echo "*****************************" && echo "MINIMUM PASSWORD REQUIREMENTS" && echo "Min Length: 8" && echo "Uppercase: 1" && echo "Lowercase: 1" && echo "Numbers: 1" && echo "CANNOT BE USERNAME | CANNOT CONTAIN GECOS INFO" && echo "*****************************" && echo
@@ -54,6 +48,11 @@ yes_or_no "Install Fail2ban? (Anti SSH Brute Force)" && sudo apt-get install fai
 # SSH 2FA
 yes_or_no "Install SSH 2FA?" && sudo apt install libpam-google-authenticator -y && echo && echo "----------------------------" && echo "SAVE YOUR BACKUP KEYS" && echo "----------------------------" && echo && google-authenticator && sudo sed -i "s/PermitEmptyPasswords no\b/PermitEmptyPasswords no \nChallengeResponseAuthentication yes/gI" /etc/ssh/sshd_config && sudo sed -i "s/@include common-auth\b/@include common-auth \n \n# Two Factor Authentication with Google Authenticator \nauth    required    pam_google_authenticator.so/gI" /etc/pam.d/sshd && sudo systemctl restart ssh
 
+sudo apt install ufw -y
+sudo ufw limit $desired_port/tcp comment 'Rate limit on SSH attempts'
+sudo systemctl restart ssh
+sudo ufw enable
+sudo ufw status
 
 # Remove useless packages
 sudo apt-get autoremove 
