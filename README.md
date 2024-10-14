@@ -24,12 +24,12 @@ apt update && apt install git -y && git clone https://github.com/deadplev-ai/ASS
 ```
 <br />
 
-## OPTIONAL: SSH Keypair
+## OPTIONAL: SSH Keypair (LINUX COMMAND ONLY)
 ```bash
 cd ~/.ssh && ssh-keygen -b 4096
 ```
 ```bash
-scp -P PORT KEY.pub USER@IP:~/.ssh/authorized_keys
+read -p "Server IP: " server_IP && read -p "SSH Port: " ssh_port && read -p "Server Username: " server_user && read -p "Pub Key File Location: " key_location && scp -P $(ssh_port) $(key_location) $(server_user)@$(server_IP):~/.ssh/authorized_keys
 ```
 <br />
 
