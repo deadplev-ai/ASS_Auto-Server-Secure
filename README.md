@@ -29,7 +29,7 @@ apt update && apt install git -y && git clone https://github.com/deadplev-ai/ASS
 cd ~/.ssh && ssh-keygen -b 4096
 ```
 ```bash
-read -p "Server IP: " server_IP && read -p "SSH Port: " ssh_port && read -p "Server Username: " server_user && read -p "Pub Key File Location: " key_location && scp -P $(ssh_port) $(key_location) $(server_user)@$(server_IP):~/.ssh/authorized_keys
+read -p "Server IP: " server_IP && read -p "SSH Port: " ssh_port && read -p "Server Username: " server_user && read -p "Pub Key File Location: " key_location && echo "Running: scp -P $ssh_port $key_location $server_user@$server_IP:~/.ssh/authorized_keys" && scp -P $ssh_port $key_location $server_user@$server_IP:~/.ssh/authorized_keys
 ```
 <br />
 
