@@ -29,7 +29,7 @@ apt update && apt install git -y && git clone https://github.com/deadplev-ai/ASS
 cd ~/.ssh && ssh-keygen -b 4096
 ```
 ```bash
-scp KEY.pub USER@IP:~/.ssh/authorized_keys
+scp -P PORT KEY.pub USER@IP:~/.ssh/authorized_keys
 ```
 <br />
 
