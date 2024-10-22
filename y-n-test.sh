@@ -26,4 +26,5 @@ yes_or_no "Disable Core Dumps? (!!No More Crash Logs!!)" && echo "Install #5"
 # SSH 2FA
 yes_or_no "Install SSH 2FA?" && echo "aight"
 
-#App Armor config in future
+# App Armor config in future
+# Will use this for mon interactive installs for Harvester
