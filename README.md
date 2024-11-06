@@ -41,7 +41,6 @@ sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/s
 
 ## Coming Soon
 
-- Y/N Software Packages (Optional)
 - Anti SSH Brute Force + Mail Notifications (Fail2Ban)
 - Auto Scan Anti Virus (ClamAV + Config)
 - Disable Unused Filesystems
@@ -54,5 +53,3 @@ sudo sed -i 's/PasswordAuthentication yes\b/PasswordAuthentication no/gI' /etc/s
 - DDOS Protection (UFW Rate limiting + NGINX)
 - AI Powered Security (EMail Analyser, IPS, IDS, Network, Endpoint etc)
 - Dream Machine LAN HTTPS & AI Network analysis + Potential Home Host Server
-
-- Auto Clean-up (Remove install.sh & user_setup.sh)
